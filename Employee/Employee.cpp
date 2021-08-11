@@ -1,19 +1,20 @@
+// Employee.cpp
+
 #include <iostream>
 #include "Employee.h"
 
 using namespace std;
 
 namespace Records {
-    
-    // 생성자로 성과 이름에 대한 인수를 받아 각각의 값을 해당 데이터 맴버에 설정
-    Employee::Employee(const std::string& firstName, const std::string& lastName)
-     : mFirstName(firstName), mLastName(lastName)
-    {
-    }
+	// 성, 이름을 받아 각각의 값을 해당 데이터 맴버에 설정.
+	Employee::Employee(const std::string& firstName, const std::string& lastName)
+		: mFirstName(firstName)
+		, mLastName(lastName)
+	{
+	}
 
-    // promote & demote는 단순히 인수로 전달된 값을 각자의 의미에 맞게 바꿔서
-    // setSalary 메서드에 전달.
-    void Employee::promote(int raiseAmount)
+	// 인수로 전달된 값을 의미에 맞게 바꿔서 setSalary 메서드로 전달.
+	void Employee::promote(int raiseAmount)
 	{
 		setSalary(getSalary() + raiseAmount);
 	}
@@ -23,7 +24,7 @@ namespace Records {
 		setSalary(getSalary() - demeritAmount);
 	}
 
-    // hire & fire는 mHired 데이터 맴버를 설정
+	// mHired 변수 설정하는 고용, 해고 메서드
 	void Employee::hire()
 	{
 		mHired = true;
@@ -34,7 +35,7 @@ namespace Records {
 		mHired = false;
 	}
 
-    // display는 현재 직원에 대한 정보를 console에 출력 스트림으로 화면에 표시
+	// 현재 직원에 대한 정보를 콘솔 출력.
 	void Employee::display() const
 	{
 		cout << "Employee: " << getLastName() << ", " << getFirstName() << endl;
