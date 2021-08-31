@@ -1,0 +1,1 @@
+GridTest.cpp와 GridTestString.cpp은 따로 컴파일한다.
