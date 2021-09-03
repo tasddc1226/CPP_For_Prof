@@ -60,7 +60,7 @@ SpreadsheetCell& Spreadsheet::Impl::getCellAt(size_t x, size_t y)
 	verifyCoordinate(x, y);
 	return mCells[x][y];
 }
-
+// 중첩 클래스 이므로, Spreadsheep::Impl::swap() 으로 지정해야 함. 다른 멤버도 마찬가지
 void Spreadsheet::Impl::swap(Impl& other) noexcept
 {
 	using std::swap;

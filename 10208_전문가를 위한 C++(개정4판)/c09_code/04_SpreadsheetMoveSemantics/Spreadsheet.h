@@ -8,11 +8,11 @@ class Spreadsheet
 public:
 	Spreadsheet(size_t width, size_t height);
 	Spreadsheet(const Spreadsheet& src);
-	Spreadsheet(Spreadsheet&& src) noexcept; // 이동 생성자
+	Spreadsheet(Spreadsheet&& src) noexcept; // ??? ??????
 	~Spreadsheet();
 
 	Spreadsheet& operator=(const Spreadsheet& rhs);
-	Spreadsheet& operator=(Spreadsheet&& rhs) noexcept;  // 이동 대입 연산자
+	Spreadsheet& operator=(Spreadsheet&& rhs) noexcept;  // ??? ???? ??????
 
 	void setCellAt(size_t x, size_t y, const SpreadsheetCell& cell);
 	SpreadsheetCell& getCellAt(size_t x, size_t y);
